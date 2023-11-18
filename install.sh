@@ -1,22 +1,24 @@
 #!/bin/bash
 
-local $DIR=$(dirname $0)
+DIR="$(dirname $0)"
+DIR="$(dirname "$(readlink -f "$0")")"
+echo $DIR
 
 # bashrc files
-ln -s "$DIR/.bashrc" ~/.bashrc
-ln -s "$DIR/.bash_aliases" ~/.bash_aliases
-ln -s "$DIR/.bash_logout" ~/.bash_logout
-ln -s "$DIR/.bash_paths" ~/.bash_paths
-ln -s "$DIR/.bash_profile" ~/.bash_profile
-ln -s "$DIR/.bash_prompt" ~/.bash_prompt
+ln -sf "$DIR/.bashrc" ~/.bashrc
+ln -sf "$DIR/.bash_aliases" ~/.bash_aliases
+ln -sf "$DIR/.bash_logout" ~/.bash_logout
+ln -sf "$DIR/.bash_paths" ~/.bash_paths
+ln -sf "$DIR/.bash_profile" ~/.bash_profile
+ln -sf "$DIR/.bash_prompt" ~/.bash_prompt
 
 # gitconfig
-ln -s "$DIR/.gitconfig" ~/.gitconfig
+ln -sf "$DIR/.gitconfig" ~/.gitconfig
 
 # fonts
-ln -s "$DIR/.fonts" ~/.fonts
+ln -sf "$DIR/.fonts" ~/.fonts
 
 # config
-ln -s "$DIR/.config/kitty" ~/.config/kitty
-ln -s "$DIR/.config/fontconfig" ~/.config/fontconfig
+ln -sf "$DIR/.config/kitty" ~/.config/kitty
+ln -sf "$DIR/.config/fontconfig" ~/.config/fontconfig
 
