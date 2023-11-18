@@ -118,6 +118,6 @@ fi
 
 source ~/.bash_profile
 source ~/.bash_aliases
-source ~/.bash_paths.sh
+    source ~/.bash_paths
 shopt -s histverify
 source ~/.bash_prompt
