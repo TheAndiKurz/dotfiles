@@ -19,4 +19,4 @@ ln -sf "$DIR/.fonts" ~/.fonts
 # config
 ln -sf "$DIR/.config/kitty" ~/.config/kitty
 ln -sf "$DIR/.config/fontconfig" ~/.config/fontconfig
-
+ln -sf "$DIR/.config/starship.toml" ~/.config/starship.toml

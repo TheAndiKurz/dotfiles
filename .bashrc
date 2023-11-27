@@ -118,6 +118,9 @@ fi
 
 source ~/.bash_profile
 source ~/.bash_aliases
-    source ~/.bash_paths
+source ~/.bash_paths
 shopt -s histverify
-source ~/.bash_prompt
+
+eval "$(starship init bash)"
+
+
