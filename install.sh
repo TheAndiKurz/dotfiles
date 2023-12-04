@@ -14,9 +14,12 @@ ln -sf "$DIR/.bash_prompt" ~/.bash_prompt
 ln -sf "$DIR/.gitconfig" ~/.gitconfig
 
 # fonts
+rm -r ~/.fonts
 ln -sf "$DIR/.fonts" ~/.fonts
 
 # config
+rm -r ~/.config/kitty
 ln -sf "$DIR/.config/kitty" ~/.config/kitty
+rm -r ~/.config/fontconfig
 ln -sf "$DIR/.config/fontconfig" ~/.config/fontconfig
 ln -sf "$DIR/.config/starship.toml" ~/.config/starship.toml
