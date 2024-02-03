@@ -4,11 +4,8 @@ DIR="$(dirname "$(readlink -f "$0")")"
 
 # bashrc files
 ln -sf "$DIR/.bashrc" ~/.bashrc
-ln -sf "$DIR/.bash_aliases" ~/.bash_aliases
-ln -sf "$DIR/.bash_logout" ~/.bash_logout
-ln -sf "$DIR/.bash_paths" ~/.bash_paths
-ln -sf "$DIR/.bash_profile" ~/.bash_profile
-ln -sf "$DIR/.bash_prompt" ~/.bash_prompt
+ln -sf "$DIR/.aliases" ~/.aliases
+ln -sf "$DIR/.paths" ~/.paths
 
 # gitconfig
 ln -sf "$DIR/.gitconfig" ~/.gitconfig
@@ -22,4 +19,3 @@ rm -r ~/.config/kitty
 ln -sf "$DIR/.config/kitty" ~/.config/kitty
 rm -r ~/.config/fontconfig
 ln -sf "$DIR/.config/fontconfig" ~/.config/fontconfig
-ln -sf "$DIR/.config/starship.toml" ~/.config/starship.toml

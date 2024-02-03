@@ -2,5 +2,6 @@
 
 export PATH=$PATH:~/.cargo/bin/
 export PATH=$PATH:~/.local/bin/
+export PATH=$PATH:~/.local/kitty.app/bin
 
 [ -f "/home/andik/.ghcup/env" ] && source "/home/andik/.ghcup/env" # ghcup-env
