@@ -1,3 +1,4 @@
 alias vim="nvim"
 alias clang="clang-15"
 alias ll="ls -lha"
+alias godot="godot4"
