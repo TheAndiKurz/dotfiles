@@ -4,6 +4,7 @@ export PATH=$PATH:~/.cargo/bin/
 export PATH=$PATH:~/.local/bin/
 export PATH=$PATH:~/.local/kitty.app/bin
 export PATH=$PATH:~/.dotnet/tools
+export PATH=$PATH:/opt/nvim-linux64/bin
 
 [ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
 [ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env" # rustup-env
