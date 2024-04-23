@@ -22,6 +22,10 @@ ln -sf "$DIR/.gitconfig" ~/.gitconfig
 rm -r ~/.fonts
 ln -sf "$DIR/.fonts" ~/.fonts
 
+# icons
+rm -r ~/.icons/
+ln -sf "$DIR/.fonts" ~/.icons
+
 # config
 rm -rf ~/.config/sway
 ln -sf "$DIR/.config/sway" ~/.config/sway
