@@ -10,6 +10,11 @@ else
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
+if [ -d "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}" ]; then
+    echo "installing zsh-autosuggestions"
+    git clone git@github.com:zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+fi
+
 # bashrc files
 ln -sf "$DIR/.aliases" ~/.aliases
 ln -sf "$DIR/.paths" ~/.paths
