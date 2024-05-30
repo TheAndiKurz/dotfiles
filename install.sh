@@ -1,5 +1,18 @@
 #!/bin/bash
 
+# check dependencies
+if ! hash curl 2>/dev/null; then
+    echo "curl not found"
+    echo "please install curl"
+    exit 1
+fi
+
+if ! hash git 2>/dev/null; then
+    echo "git not found"
+    echo "please install git"
+    exit 1
+fi
+
 DIR="$(dirname "$(readlink -f "$0")")"
 
 # installs
@@ -13,6 +26,24 @@ fi
 if [ -d "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}" ]; then
     echo "installing zsh-autosuggestions"
     git clone git@github.com:zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+    git clone git@github.com:zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+fi
+
+if [ hash zoxide 2>/dev/null ]; then
+    echo "zoxide already installed"
+else
+    echo "installing zoxide"
+    curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
+
+    echo "consider installing ripgrep"
+fi
+
+if [ hash fzf 2>/dev/null ]; then
+    echo "fzf already installed"
+else
+    echo "installing fzf"
+    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+    ~/.fzf/install
 fi
 
 # bashrc files
