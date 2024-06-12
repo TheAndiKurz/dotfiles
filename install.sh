@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 # check dependencies
 if ! hash curl 2>/dev/null; then
@@ -27,9 +27,11 @@ if [ -d "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}" ]; then
     echo "installing zsh-autosuggestions"
     git clone git@github.com:zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
     git clone git@github.com:zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+else
+    echo "not installing zsh plugins"
 fi
 
-if [ hash zoxide 2>/dev/null ]; then
+if hash zoxide 2>/dev/null; then
     echo "zoxide already installed"
 else
     echo "installing zoxide"
@@ -38,7 +40,7 @@ else
     echo "consider installing ripgrep"
 fi
 
-if [ hash fzf 2>/dev/null ]; then
+if hash fzf 2>/dev/null; then
     echo "fzf already installed"
 else
     echo "installing fzf"
