@@ -8,6 +8,3 @@
 	autocrlf = input
 [pull]
 	rebase = false
-[safe]
-	directory = .
-	directory = /media/andreaskurz/Volume/Uni/2024S/information-retrieval
