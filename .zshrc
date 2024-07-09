@@ -109,3 +109,5 @@ source ~/.paths
 eval "$(zoxide init --cmd cd zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+eval "$(oh-my-posh --init --shell zsh --config ~/.shell.toml)"
